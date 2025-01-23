@@ -16,6 +16,7 @@ body {
   background-color: #c1a5d3;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 header {
