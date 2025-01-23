@@ -2,12 +2,17 @@
   margin: 0;
   padding: 0;
   color: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
-  position: relative;
   height: 100vh;
   background-color: #c1a5d3;
+  overflow-x: hidden;
 }
 
 header {
@@ -15,6 +20,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: first baseline;
+  height: 3rem;
+  box-shadow: 1px 1px 2px #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #c1a5d3;
+  z-index: 1;
 }
 
 nav {
@@ -65,4 +78,99 @@ img.harv {
   position: absolute;
   top: -188px;
   left: 367px;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+section:first-of-type {
+  padding-top:3rem;
+}
+
+.birthday {
+  font-family: "Atma", serif;
+  -webkit-text-stroke: 2px navy;
+  color: dodgerblue;
+  transform: rotate(-3deg);
+  animation: wiggle-and-grow 2s infinite;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  padding: 20px 45px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-115 -50 330 100"><path d="M -110 25 C -115 25 -99 7 -95 3 C -101 -1 -113 -20 -110 -20 C -114 -24 118 -24 110 -20 C 115 -21 101 -2 95 3 C 102 8 115 25 110 25 C 34 20 -20 20 -110 25" fill="rgb(55,195,184)" /></svg> ') 0 / auto 100%;
+}
+
+@keyframes wiggle-and-grow {
+  0% {
+    transform: rotate(-3deg) scale(1);
+  }
+  50% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(-3deg) scale(1);
+  }
+}
+
+.balloon {
+  z-index: 1;
+  fill: yellow;
+}
+
+.birthday-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.dynapuff-400 {
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: hotpink;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 1px #fc59ab;
+  transform: rotate(-2deg);
+}
+
+.dynapuff-400 span {
+  color: #f5cb03;
+  text-shadow: 1px 1px 1px rgb(55,195,184);
+}
+
+.date {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-family: "Delius Swash Caps", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: navy;
+  font-size: 1.3rem;
+}
+
+.date h3 {
+  background-color: hotpink;
+  border-radius: 50%;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  transform: skew(3deg, 3deg);
+}
+
+.date h3 span {
+  transform: skew(-3deg, -3deg);
+}
+
+.details-text {
+  font-family: "Delius Swash Caps", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 2rem;
 }
