@@ -1,0 +1,14 @@
+.party-hat .hat {
+  fill: #fccd0f;
+}
+.party-hat .stripe {
+  stroke: rgb(246, 122, 13);
+  stroke-width: 3;
+  fill: none;
+}
+.party-hat .puff {
+  stroke: turquoise;
+  stroke-width: 5;
+  stroke-linecap: round;
+  fill: none;
+}

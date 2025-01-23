@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: #c1a5d3;
+}
+
+header {
+  padding: .25rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+
+nav {
+  display: flex;
+  gap: 2em;
+  font-size: .7rem;
+
+}
+
+nav a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-family: "Merriweather Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.current-page {
+  text-decoration: underline;
+  text-decoration-color: #1600a7;
+  text-underline-offset: 0.2em;
+}
+
+img.harv {
+  filter: drop-shadow(0 0 2px #000);
+  height: 60vh;
+}
+
+.cookie-regular {
+  font-family: "Cookie", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fc59ab;
+  text-shadow: 1px 1px 2px #100170;
+}
+
+.harv-container {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: fit-content;
+  transition: .1s;
+}
+
+.party-hat {
+  position: absolute;
+  top: -188px;
+  left: 367px;
+}
