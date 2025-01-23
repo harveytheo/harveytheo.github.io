@@ -12,11 +12,7 @@ html {
 }
 
 body {
-  height: 100dvh;
   background-color: #c1a5d3;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -75,15 +71,19 @@ img.harv {
 
 section {
   scroll-snap-align: start;
-  height: 100dvh;
+  height: calc(100dvh - 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-section:first-of-type {
-  padding-top:5rem;
+main {
+  margin-top:4rem;
+  height: calc(100dvh - 4rem);
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 section:nth-of-type(2) {
