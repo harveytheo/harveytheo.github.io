@@ -12,43 +12,24 @@
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/party_hat.css">
+  <script defer src="./assets/js/script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harvey's Birthday!</title>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <h1 class="cookie-regular">Harvey</h1>
     <nav>
-      <a href="./bday.html" class="current-page">Home</a>
-      <a href="./birthday_hat.html">Hat</a>
-      <a href="./ornament_fancy.html">Ornament</a>
+      <a href="#time">Time</a>
+      <a href="#location">Location</a>
+      <a href="#surprise">Surprise</a>
     </nav>
   </header>
-  <section class="birthday-details">
-    <h1 class="birthday">BiRthDAy</h1>
-    <h2 class="dynapuff-400">LeT'S <span>PaRTy</span></h2>
-    <div class="date">
-      <h3><span>01</span></h3>
-      <h3><span>31</span></h3>
-      <h3 class="time"><span>1</span></h3>
-      <h3><span>pm</span></h3>
-    </div>
-    <p class="details-text">
-      You're invited to Harvey's 7th birthday party! Join us for a fun-filled day of games, cake, and good times.
-    </p>
-    <a class="rsvp" href="https://forms.gle/FpVRFLWBVUQn8RGr6">RSVP</a>
-  </section>
-  <section>
-    <svg class="balloon" width="125" height="200" viewBox="-100 -100 225 300">
-      <path
-        d="M58.526 74.032C63.584 68.064 91.344 30.262 92.549-2.381 94.673-59.8764 58.526-117-.013-117-62.5551-117-99.7672-60.668-96.0776-2.381-94.2544 26.423-79.3734 48.5-66.5578 65.372-60.5689 73.257-28.2829 108.749-10.35 115-7.35 118-10.35 129-10.35 129H10.65V115C24.927 112.292 53.735 79.686 58.526 74.032Z" />
-    </svg>
-    <div class="harv-container">
-      <img class="harv" src="./assets/images/harv.png" alt="Harvey posing with his hand in a peace sign" height="300">
-
-
-      <svg class="party-hat" width="125" height="250" viewBox="-30 -50 60 100">
+  
+  <section id="time" class="birthday-details">
+    <div id="harv1" >
+      <svg id="hat1" class="party-hat" width="125" height="250" viewBox="-60 -100 120 200">
         <!-- Party Hat -->
         <defs>
           <radialGradient id="shine" cx=".5" cy=".5" r=".5">
@@ -66,7 +47,7 @@
             <path d="M -15 -97 Q -10 -82 -15 -62" />
           </g>
         </defs>
-
+  
         <!-- hat -->
         <polygon class="hat" points="-15,-80 -50,90 50,80" />
         <path class="hat" d="M -50 90 L 50 80 Q 0 114 -50 90" stroke="#fccd0f" />
@@ -82,7 +63,139 @@
         <!-- mouth -->
         <path d="M -8 64 Q 0 66 5 62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" />
         <!-- blush -->
-        <ellipse cx="17" cy="67" rx="5" ry="4" fill="hotpink" transform="skew(0 10)" />
+        <ellipse cx="17" cy="67" rx="5" ry="4" fill="hotpink" />
+        <ellipse cx="-18" cy="70" rx="5" ry="4" fill="hotpink" />
+        <!-- puffy ball on top -->
+        <use href="#puff" />
+        <use href="#puff" transform="rotate(30)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(57)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(90)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(122)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(152)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(180)" transform-origin="-15 -79.5" />
+      </svg>
+      <img src="./assets/images/harv.png" alt="Harvey peeking in from the side">
+    </div>
+    <div id="harv2" >
+      <svg id="hat2" class="party-hat" width="125" height="250" viewBox="-60 -100 120 200">
+        <!-- Party Hat -->
+        <defs>
+          <radialGradient id="shine" cx=".5" cy=".5" r=".5">
+            <stop offset="0%" stop-color="fill" stop-opacity=".7" />
+            <stop offset="100%" stop-color="fill" stop-opacity=".9" />
+          </radialGradient>
+          <clipPath id="hat">
+            <polygon points="-15,-80 -50,90 50,80" />
+          </clipPath>
+          <g id="eye" class="eye">
+            <circle cx="0" cy="0" r="12" fill="white" />
+            <circle cx="1" cy="0" r="7" fill="url(#shine)" />
+          </g>
+          <g id="puff" class="puff">
+            <path d="M -15 -97 Q -10 -82 -15 -62" />
+          </g>
+        </defs>
+  
+        <!-- hat -->
+        <polygon class="hat" points="-15,-80 -50,90 50,80" />
+        <path class="hat" d="M -50 90 L 50 80 Q 0 114 -50 90" stroke="#fccd0f" />
+        <!-- stripes -->
+        <path clip-path="url(#hat)" class="stripe" d="M -50 -45 Q 10 -25 50 -85" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 -15 Q 14 5 50 -55" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 10 Q 18 30 50 -20" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 35 Q 38 55 50 -5" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 75 Q 10 95 50 55" />
+        <!-- eyes -->
+        <use href="#eye" x="15" y="52" />
+        <use href="#eye" x="-18" y="55" />
+        <!-- mouth -->
+        <path d="M -8 64 Q 0 66 5 62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" />
+        <!-- blush -->
+        <ellipse cx="17" cy="67" rx="5" ry="4" fill="hotpink" />
+        <ellipse cx="-18" cy="70" rx="5" ry="4" fill="hotpink" />
+        <!-- puffy ball on top -->
+        <use href="#puff" />
+        <use href="#puff" transform="rotate(30)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(57)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(90)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(122)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(152)" transform-origin="-15 -79.5" />
+        <use href="#puff" transform="rotate(180)" transform-origin="-15 -79.5" />
+      </svg>
+      <img src="./assets/images/harv.png" alt="Harvey peeking in from the side">
+    </div>
+    <h1 class="birthday">BiRthDAy</h1>
+    <h2 class="dynapuff-400">LeT'S <span>PaRTy</span></h2>
+    <div class="date">
+      <h3><span>01</span></h3>
+      <h3><span>31</span></h3>
+      <h3 id="at">@</h3>
+      <h3 class="time"><span>1</span></h3>
+      <h3><span>pm</span></h3>
+    </div>
+    <p class="details-text">
+      You're invited to Harvey's 7th birthday party! Join us for a fun-filled day of games, cake, and good times.
+    </p>
+    <a class="rsvp" href="https://forms.gle/FpVRFLWBVUQn8RGr6">RSVP</a>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <a href="https://map.naver.com/p/entry/place/1259310397?c=15.00,0,0,0,dh">Cafe Link</a>
+  </section>
+
+  <!-- SURPRISE! -->
+  <section id="surprise">
+    <div>
+      <svg class="balloon" width="125" height="200" viewBox="-100 -100 225 300">
+        <path
+          d="M58.526 74.032C63.584 68.064 91.344 30.262 92.549-2.381 94.673-59.8764 58.526-117-.013-117-62.5551-117-99.7672-60.668-96.0776-2.381-94.2544 26.423-79.3734 48.5-66.5578 65.372-60.5689 73.257-28.2829 108.749-10.35 115-7.35 118-10.35 129-10.35 129H10.65V115C24.927 112.292 53.735 79.686 58.526 74.032Z" />
+      </svg>
+      <svg class="balloon" width="125" height="200" viewBox="-100 -100 225 300">
+        <path
+          d="M58.526 74.032C63.584 68.064 91.344 30.262 92.549-2.381 94.673-59.8764 58.526-117-.013-117-62.5551-117-99.7672-60.668-96.0776-2.381-94.2544 26.423-79.3734 48.5-66.5578 65.372-60.5689 73.257-28.2829 108.749-10.35 115-7.35 118-10.35 129-10.35 129H10.65V115C24.927 112.292 53.735 79.686 58.526 74.032Z" />
+      </svg>
+      <h2 class="dynapuff-400">See <span>you</span> there?</h2>
+    </div>
+    <div class="harv-container">
+      <img class="harv" src="./assets/images/harv.png" alt="Harvey posing with his hand in a peace sign" height="300">
+  
+  
+      <svg class="party-hat" width="125" height="250" viewBox="-60 -100 120 200">
+        <!-- Party Hat -->
+        <defs>
+          <radialGradient id="shine" cx=".5" cy=".5" r=".5">
+            <stop offset="0%" stop-color="fill" stop-opacity=".7" />
+            <stop offset="100%" stop-color="fill" stop-opacity=".9" />
+          </radialGradient>
+          <clipPath id="hat">
+            <polygon points="-15,-80 -50,90 50,80" />
+          </clipPath>
+          <g id="eye" class="eye">
+            <circle cx="0" cy="0" r="12" fill="white" />
+            <circle cx="1" cy="0" r="7" fill="url(#shine)" />
+          </g>
+          <g id="puff" class="puff">
+            <path d="M -15 -97 Q -10 -82 -15 -62" />
+          </g>
+        </defs>
+  
+        <!-- hat -->
+        <polygon class="hat" points="-15,-80 -50,90 50,80" />
+        <path class="hat" d="M -50 90 L 50 80 Q 0 114 -50 90" stroke="#fccd0f" />
+        <!-- stripes -->
+        <path clip-path="url(#hat)" class="stripe" d="M -50 -45 Q 10 -25 50 -85" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 -15 Q 14 5 50 -55" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 10 Q 18 30 50 -20" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 35 Q 38 55 50 -5" />
+        <path clip-path="url(#hat)" class="stripe" d="M -50 75 Q 10 95 50 55" />
+        <!-- eyes -->
+        <use href="#eye" x="15" y="52" />
+        <use href="#eye" x="-18" y="55" />
+        <!-- mouth -->
+        <path d="M -8 64 Q 0 66 5 62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" />
+        <!-- blush -->
+        <ellipse cx="17" cy="67" rx="5" ry="4" fill="hotpink" />
         <ellipse cx="-18" cy="70" rx="5" ry="4" fill="hotpink" />
         <!-- puffy ball on top -->
         <use href="#puff" />
@@ -94,6 +207,7 @@
         <use href="#puff" transform="rotate(180)" transform-origin="-15 -79.5" />
       </svg>
     </div>
+
   </section>
 </body>
 

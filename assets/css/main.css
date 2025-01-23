@@ -6,7 +6,9 @@
 }
 
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -17,11 +19,11 @@ body {
 }
 
 header {
-  padding: .25rem 1rem;
+  padding-inline: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: first baseline;
-  height: 3rem;
+  align-items: center;
+  height: 4rem;
   box-shadow: 1px 1px 2px #000;
   position: fixed;
   top: 0;
@@ -29,13 +31,14 @@ header {
   left: 0;
   background-color: #c1a5d3;
   z-index: 1;
+  gap: 1.5rem;
 }
 
 nav {
   display: flex;
-  gap: 2em;
   font-size: .7rem;
-
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 nav a {
@@ -46,6 +49,7 @@ nav a {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  font-size: .9rem;
 }
 
 .current-page {
@@ -63,22 +67,9 @@ img.harv {
   font-family: "Cookie", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 3rem;
   color: #fc59ab;
   text-shadow: 1px 1px 2px #100170;
-}
-
-.harv-container {
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  width: fit-content;
-  transition: .1s;
-}
-
-.party-hat {
-  position: absolute;
-  top: -188px;
-  left: 367px;
 }
 
 section {
@@ -91,7 +82,14 @@ section {
 }
 
 section:first-of-type {
-  padding-top:3rem;
+  padding-top:5rem;
+}
+
+section:nth-of-type(2) {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -115 100 230"><path d="M -50 -100 C -26 -90 44 -111 50 -100 L 50 100 C 18 85 -35 116 -50 100 L -50 -100" fill="rgb(55, 195, 184)" /></svg>');  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: 100% auto; /* Width 100%, height auto */
+  background-position: center;
 }
 
 .birthday {
@@ -102,20 +100,24 @@ section:first-of-type {
   animation: wiggle-and-grow 2s infinite;
   font-weight: 400;
   font-style: normal;
-  font-size: 60px;
+  font-size: 70px;
   padding: 20px 45px;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-115 -50 330 100"><path d="M -110 25 C -115 25 -99 7 -95 3 C -101 -1 -113 -20 -110 -20 C -114 -24 118 -24 110 -20 C 115 -21 101 -2 95 3 C 102 8 115 25 110 25 C 34 20 -20 20 -110 25" fill="rgb(55,195,184)" /></svg> ') 0 / auto 100%;
+  filter: drop-shadow(2px 2px 2px #0008);
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-115 -50 330 100"><path d="M -110 25 C -115 25 -99 7 -95 3 C -101 -1 -113 -20 -110 -20 C -114 -24 118 -24 110 -20 C 115 -21 101 -2 95 3 C 102 8 115 25 110 25 C 34 20 -20 20 -110 25" fill="rgb(55,195,184)" /></svg> ') 0 / auto 100%;
 }
 
 @keyframes wiggle-and-grow {
   0% {
     transform: rotate(-3deg) scale(1);
+    filter: drop-shadow(2px 2px 2px #0008);
   }
   50% {
     transform: rotate(3deg) scale(1.05);
+    filter: drop-shadow(4px 4px 2px #0008);
   }
   100% {
     transform: rotate(-3deg) scale(1);
+    filter: drop-shadow(2px 2px 2px #0008);
   }
 }
 
@@ -147,7 +149,6 @@ section:first-of-type {
 
 .date {
   display: flex;
-  gap: 1rem;
   font-family: "Delius Swash Caps", serif;
   font-weight: 400;
   font-style: normal;
@@ -168,6 +169,14 @@ section:first-of-type {
 
 .date h3 span {
   transform: skew(-3deg, -3deg);
+}
+
+.date h3:first-of-type {
+  margin-right: 1rem;
+}
+
+.date h3:last-of-type {
+  margin-left: 1rem;
 }
 
 .details-text {
@@ -218,4 +227,78 @@ section:first-of-type {
   font-family: "DynaPuff", serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  box-shadow: 2px 2px 2px #0008;
+}
+
+#harv1 {
+  position: absolute;
+  right: -90px;
+  bottom: -70px;
+  transform: rotate(-20deg) rotateY(180deg);
+  animation: hide-right 5s infinite;
+  animation-delay: 2.5s;
+}
+
+#harv1 img, #harv2 img {
+  width: 200px;
+}
+
+#harv2 {
+  position: absolute;
+  left: -250px;
+  bottom: -70px;
+  transform: rotate(20deg);
+  animation: hide-left 5s infinite;
+  animation-delay: 2.5s;
+}
+
+.invisible {
+  display: none;
+}
+
+#at {
+  animation: none;
+  background-color: initial;
+}
+
+@keyframes hide-right {
+  0% {
+    right: -90px;
+  }
+  40%, 60% {
+    right: -250px;
+  }
+  100% {
+    right: -90px;
+  }
+}
+
+@keyframes hide-left {
+  0%, 10% {
+    left: -250px;
+  }
+  50% {
+    left: -90px;
+  }
+  90%, 100% {
+    left: -250px;
+  }
+}
+
+#hat1 {
+  position: absolute;
+  right: 48px;
+  top: -65px;
+  height: 92px;
+  width: 45px;
+  transform: rotate(8deg);
+}
+
+#hat2 {
+  position: absolute;
+  left: 105px;
+  top: -62px;
+  height: 92px;
+  width: 45px;
+  transform: rotate(8deg);
 }
