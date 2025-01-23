@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  height: 100dvh;
+  height: 100svh;
   background-color: #c1a5d3;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -60,7 +60,7 @@ nav a {
 
 img.harv {
   filter: drop-shadow(0 0 2px #000);
-  height: 60dvh;
+  height: 60svh;
 }
 
 .cookie-regular {
@@ -74,7 +74,7 @@ img.harv {
 
 section {
   scroll-snap-align: start;
-  height: 100dvh;
+  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
