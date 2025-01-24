@@ -12,3 +12,19 @@
   stroke-linecap: round;
   fill: none;
 }
+
+.pupil {
+  animation: shift 6s infinite;
+}
+
+@keyframes shift {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateX(6px);
+  }
+  80%, 100% {
+    transform: translateY(0);
+  }
+}

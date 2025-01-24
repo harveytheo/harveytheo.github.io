@@ -171,10 +171,6 @@
             <clipPath id="hat">
               <polygon points="-15,-80 -50,90 50,80" />
             </clipPath>
-            <g id="eye" class="eye">
-              <circle cx="0" cy="0" r="12" fill="white" />
-              <circle cx="1" cy="0" r="7" fill="url(#shine)" />
-            </g>
             <g id="puff" class="puff">
               <path d="M -15 -97 Q -10 -82 -15 -62" />
             </g>
@@ -192,6 +188,11 @@
           <!-- eyes -->
           <use href="#eye" x="15" y="52" />
           <use href="#eye" x="-18" y="55" />
+
+          <circle cx="15" cy="52" r="12" fill="white" />
+              <circle class="pupil" cx="12" cy="51" r="7" fill="url(#shine)" />
+              <circle cx="-18" cy="55" r="12" fill="white" />
+              <circle class="pupil" cx="-21" cy="54" r="7" fill="url(#shine)" />
           <!-- mouth -->
           <path d="M -8 64 Q 0 66 5 62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" />
           <!-- blush -->
