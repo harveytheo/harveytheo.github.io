@@ -13,6 +13,7 @@ html {
 
 body {
   background-color: #c1a5d3;
+  overflow-x: hidden;
 }
 
 header {
@@ -482,4 +483,8 @@ section:nth-of-type(2) {
   100% {
     transform: translateY(10px) rotate(5deg) rotateY(180deg);
   }
+}
+
+.harv-container {
+  font-size: 0;
 }
