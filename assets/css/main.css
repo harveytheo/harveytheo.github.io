@@ -84,15 +84,16 @@ section {
 main {
   margin-top:4rem;
   height: calc(100dvh - 4rem);
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 section:nth-of-type(2) {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -115 100 230"><path d="M -50 -70 C -26 -60 44 -81 50 -70 L 50 70 C 18 55 -35 86 -50 70 L -50 -70" fill="rgb(55, 195, 184)" /></svg>'), #c1a5d3;
   background-repeat: no-repeat;
-  background-size: 100% auto; /* Width 100%, height auto */
+  background-size: 107% auto; /* Width 100%, height auto */
   background-position: center;
 }
 
@@ -316,11 +317,17 @@ section:nth-of-type(2) {
 }
 
 .place-name {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   color: navy;
   font-weight: bold;
   box-shadow: 0 0px navy;
   /* animation: click-me 2s infinite; */
+  font-family: "Dongle", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-underline-offset: 0.3em;
+  text-decoration-style:dotted;
+  margin-bottom: -15px;
 }
 
 @keyframes click-me {
@@ -364,11 +371,16 @@ section:nth-of-type(2) {
 }
 
 .address {
-  font-size: 1.2rem;
-  color: hotpink;
+  font-size: 2rem;
+  color: white;
   text-shadow: 0 0 1px #0008;
+  text-decoration: none;
   padding-inline: 1rem;
   text-align: center;
+  font-family: "Dongle", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 30px;
 }
 
 .map-pin {
